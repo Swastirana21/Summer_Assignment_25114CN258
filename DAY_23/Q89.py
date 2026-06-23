@@ -1,0 +1,14 @@
+# Find first non-repeating character 
+def first_non_repeating(s):
+    freq={}
+    for char in s:
+        if char in freq:
+            freq[char]+=1
+        else:
+            freq[char]=1
+    for char in s:
+        if freq[char]==1:
+            return char
+    return "No non-re[eating charcter found"
+s="aabbcde"
+print(first_non_repeating(s))
